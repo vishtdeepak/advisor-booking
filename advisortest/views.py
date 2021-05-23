@@ -43,14 +43,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 
-# class AdvisorList(generics.ListCreateAPIView):
-
-#     def get_queryset(self):
-#         queryset = Advisor.objects.filter(user_id=self.kwargs['pk'])
-#         print(queryset)
-#         return queryset
-#     serializer_class = AdvisorSerializer
-
 class AdvisorList(generics.ListAPIView):
     queryset = Advisor.objects.all()
     serializer_class = AdvisorSerializer
@@ -102,4 +94,10 @@ class AdvisorListBooking(generics.ListAPIView):
 
 
 
-    
+    # class AdvisorList(generics.ListCreateAPIView):
+
+#     def get_queryset(self):
+#         queryset = Advisor.objects.filter(user_id=self.kwargs['pk'])
+#         print(queryset)
+#         return queryset
+#     serializer_class = AdvisorSerializer
