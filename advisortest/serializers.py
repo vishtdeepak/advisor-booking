@@ -31,8 +31,6 @@ class AdvisorBookingSerializer(serializers.ModelSerializer):
         model =  AdvisorBooking
         fields = "__all__"
 
-# booking_advisor_date = AdvisorBookingSerializer(many=True, read_only=True, required=False)
-
 
 class AdvisorSerializer(serializers.ModelSerializer):
     class Meta:
