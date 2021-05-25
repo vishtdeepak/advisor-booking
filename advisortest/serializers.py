@@ -25,7 +25,6 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         return user
 
 
-
 class AdvisorBookingSerializer(serializers.ModelSerializer):
     class Meta:
         model =  AdvisorBooking
