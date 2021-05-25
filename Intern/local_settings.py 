@@ -1,6 +1,4 @@
 import os
-import dj_database_url
-import django_heroku
 from pathlib import Path
 
 
@@ -15,9 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o5c1ubs-omel1$_7-&=yr3sq+a-d4vd3y7z8cplr(g-d!nw4j_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -71,6 +69,11 @@ WSGI_APPLICATION = 'Intern.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'advisorlist',
+        'USER': 'deepak',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -136,4 +139,3 @@ REST_FRAMEWORK = {
      )
 }
 
-django_heroku.settings(locals())

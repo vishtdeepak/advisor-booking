@@ -9,7 +9,6 @@ from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 
 
-
 class LoginAPIView(generics.CreateAPIView):
     def post(self, request, *args, **kwargs):
         email = request.data.get("email")
@@ -75,8 +74,8 @@ class AdvisorListBooking(generics.ListAPIView):
     serializer_class =AdvisorSerializerDate
     # queryset = Advisor.objects.all()
     def get_queryset(self):
-        queryset = Advisor.objects.filter()
-        print(queryset)
+        queryset = Advisor.objects.all()
+        # print(queryset)
         return queryset
     
 
