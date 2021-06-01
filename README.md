@@ -8,10 +8,13 @@
 
 
 The url would be hit in followings:
-
 api/ admin/advisor/
 api/ user/<int:pk>/advisor/
+
 api/ user/<int:pk>/advisor/<int:advisor_pk>/
+
 api/ user/<int:pk>/advisor/booking/
+
 api/ user/register/
+
 api/ user/login/
